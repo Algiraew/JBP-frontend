@@ -11,7 +11,8 @@ const PhoneCards = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getPhone())
-    }, [dispatch])
+    }, [dispatch]);
+    
     const phones = useSelector((state) => state.phones.phones)
     return (
         <div className={style.Cards}>
