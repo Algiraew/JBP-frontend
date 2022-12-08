@@ -72,7 +72,7 @@ const ComparePhone = () => {
                                 <div>{item.specification.camera}</div>
                                 <div>{item.specification.battery}</div>
                                 <div>{item.specification.wight}</div>
-                                <button className={style.del_button} onClick={() => handleDel(item._id)}>УБРАТЬ</button>
+                                <button className={style.del_button} onClick={() => handleDel(item._id)}>✕</button>
                             </div>
                         )
                     }

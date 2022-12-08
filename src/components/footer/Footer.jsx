@@ -14,73 +14,73 @@ export default function Footer() {
       </div>
 
         <div className={styles.things}>
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Продукция
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Часы
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Планшеты
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Ноутбуки
           </a>
         </div>
 
         <div className={styles.company}>
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Компания
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             О нас
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Поддержка
           </a>
         </div>
 
         <div className={styles.div_support}>
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Поддержка
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
           Гид по стилю
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
           Лицензирование
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
           Журнал изменений
           </a>
 
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
           Контакт
           </a>
         </div>
 
         <div className={styles.div_follow}>
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
           Подписывайтесь на нас
           </a>
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Instagram
           </a>
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Facebook
           </a>
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Lincedin
           </a>
-          <a className={styles.nav_link} href="#">
+          <a className={styles.nav_link} href="/">
             Youtube
           </a>
         </div>

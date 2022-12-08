@@ -7,7 +7,6 @@ const CompareButton = () => {
     const dispatch = useDispatch()
     const compare = useSelector((state) => state.compare.products)
     const active = useSelector((state) => state.compare.active)
-    console.log(compare);
 
     const handleActive = () => {
         dispatch(compareState(!active))

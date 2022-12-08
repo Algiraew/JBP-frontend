@@ -3,7 +3,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 const initialState = {
     productId: [],
     error: null,
-    loading: false
+    loading: false,
+    active: false,
 }
 
 export const getCart = createAsyncThunk(
@@ -32,7 +33,7 @@ export const addToCart = createAsyncThunk(
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    productId
+                    productId: productId
                 })
             })
             const cart = await res.json()
@@ -95,8 +96,12 @@ export const deleteFromCart = createAsyncThunk(
 const cartSlice = createSlice({
     name: 'cart',
     initialState,
-    reducers: {},
-    extraReducers:  (builder) => {
+    reducers: {
+        cartState(state, action) {
+            state.active = !state.active
+        },
+    },
+    extraReducers: (builder) => {
         builder
             .addCase(getCart.pending, (state, action) => {
                 state.loading = true
@@ -154,5 +159,7 @@ const cartSlice = createSlice({
             })
     }
 })
+
+export const { cartState } = cartSlice.actions;
 
 export default cartSlice.reducer
