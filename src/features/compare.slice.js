@@ -50,14 +50,10 @@ export const getCompare = createAsyncThunk(
 
 export const deleteCompare = createAsyncThunk(
     'compare/delete',
-    async (productId, thunkAPI) => {
+    async (id, thunkAPI) => {
         try {
-            const res = await fetch(`http://localhost:4000/compare/`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({productId})
+            const res = await fetch(`http://localhost:4000/compare/${id}`, {
+                method: 'DELETE'
             })
             const compare = await res.json()
             if (compare.error) {
@@ -114,7 +110,7 @@ const compareSlice = createSlice({
             })
             .addCase(deleteCompare.fulfilled, (state, action) => {
                 state.loading = false
-                state.products = state.products.filter((item) => item._id !== action.payload._id)
+                state.products = state.products.filter((item) => item.product !== action.payload.product)
             })
     }
 })

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart } from '../../../features/cart.slice'
+import { addCartItem } from '../../../features/cart.slice'
 import { addCompare, getCompare } from '../../../features/compare.slice'
 import styles from "../phoneCards/Card.module.scss"
 
@@ -12,10 +12,10 @@ function PhoneCard({ item }) {
   }, [dispatch])
 
   const compare = useSelector((state) => state.compare.products)
-  const products = useSelector((state) => state.cart.productId)
+  const products = useSelector((state) => state.cart.items)
   const valid= products.filter((element) => element.productId === item._id)
   const quantity = compare.find((element) => element.productId === item._id)
-
+console.log(products);
   const handleCompare = (id) => {
     if (!quantity) {
       dispatch(addCompare(id))
@@ -24,7 +24,7 @@ function PhoneCard({ item }) {
 
   const handleCart = (id) => {
     if (!valid) {
-      dispatch(addToCart(id))
+      dispatch(addCartItem(id))
     }
   }
 
