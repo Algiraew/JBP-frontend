@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart } from '../../../features/cart.slice'
+import { addToCart, getCart } from '../../../features/cart.slice'
 import { addCompare, getCompare } from '../../../features/compare.slice'
 import styles from "../phoneCards/Card.module.scss"
 
@@ -22,8 +22,10 @@ function PhoneCard({ item }) {
     }
   }
 
+  console.log(Boolean(valid.length));
+
   const handleCart = (id) => {
-    if (!valid) {
+    if (!Boolean(valid.length)) {
       dispatch(addToCart(id))
     }
   }

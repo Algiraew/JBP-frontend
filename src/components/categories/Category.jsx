@@ -1,19 +1,13 @@
 import React from 'react'
 import laptop from './photo-category/laptop.png'
-import styles from '../categories/category.module.scss'
+import styles from '../categories/Category.module.scss'
 import watch from './photo-category/watch.png'
 import wphones from './photo-category/wphones.png'
 import tablet from './photo-category/tablet.png'
-import CarouselBox from '../Carousel/Carousel.box'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 export default function Category () {
   return (
-    <category className={styles.category_main}>
-         <CarouselBox/>
-
     <div className={styles.category_main}>
         <h2 className={styles.main_text}>Наши последние предложения и категории</h2>
         <p className={styles.paragraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. 
@@ -41,6 +35,5 @@ export default function Category () {
                 </div>
             </ul>
         </div>
-     </category>
     )
 }

@@ -3,13 +3,13 @@
     right: 10px;
     top: 10px;
     width: 100px;
-    height: 40px;
+    height: 35px;
     border: none;
     background-color: rgb(28, 162, 251);
     color: rgb(255, 255, 255);
     cursor: pointer;
     border-radius: 15px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .btn:hover {
@@ -40,12 +40,13 @@
 
 .count {
     position: absolute;
-    top: 40px;
+    top: 37px;
     right: 15px;
     background-color: rgb(247, 67, 67);
-    width: 30px;
-    height: 20px;
+    width: 35px;
+    height: 25px;
     text-align: center;
-    border-radius: 20px;
+    vertical-align: center;
+    border-radius: 25px;
     color: #fff;
 }
