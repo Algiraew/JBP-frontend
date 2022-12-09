@@ -9,6 +9,7 @@
     position: relative;
     background-color: #fff;
     box-shadow: 0 0 20px rgb(210, 205, 205);
+    margin-left: 15px;
 
     img {
         max-width: 200px;
@@ -20,6 +21,7 @@
     position: fixed;
     top: 50px;
     width: 90%;
+    left: 70px;
     height: 280px;
     display: flex;
     padding-top: 25px;
@@ -28,6 +30,7 @@
     background-color: #fff;
     box-shadow: 0 0 10px grey;
     border-radius: 10px;
+    z-index: 3;
 
     .photo {
         max-width: 100px;

@@ -12,21 +12,31 @@ import BlankPage from './components/blankPage/BlankPage';
 // import ComparePhone from "./components/Phone/Compare/ComparePhone";
 import CarouselBox from "./components/Carousel/Carousel.box";
 import YandexMap from "./components/about/YandexMap";
+import Cart from "./components/Cart/Cart";
+import ComparePhone from "./components/Phone/Compare/ComparePhone";
+import PhoneCard from "./components/Phone/phoneCards/PhoneCard";
+import NewsPage from "./components/NewsPage/NewsPage";
+import { useSelector } from "react-redux";
 
 
 function App() {
+const {token} = useSelector((state) => state.auth)
+ 
   return (
     <div className={styles.App}>
       <Header />
-      <CarouselBox />
-      <Category />
-      <PhoneCards/>
-      {/* <Routes>
-        <Route path='/about' element={<About />} />
-        {/* <Route path="/comparison" element={< PhoneCards />} /> */}
-        {/* <Route path='/products' element={<Category />} /> */}
-        {/* <Route path='/noPage' element={<BlankPage />} /> */}
-      {/* </Routes> */}
+      <Routes>
+
+      < Route path="/card" element = {<Cart/>}/>
+       <Route path="/ComparePhone" element ={<ComparePhone/>}/> 
+       <Route path="/phoneCards" element = {<PhoneCards/>}/>
+        <Route path="/comparison" element = {< BlankPage/>} />
+        <Route path='/products' element = {<Category/>}/>
+        <Route path='/about' element = {<About/>} />
+        <Route path='/noPage' element = {<BlankPage/>} />
+        <Route path="/news" element = {<NewsPage/>} />
+      </Routes>
+
       <Footer />
     </div>
   );
