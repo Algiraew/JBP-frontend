@@ -67,3 +67,15 @@
     border-radius: 25px;
     color: #fff;
 }
+
+.auth {
+    width: 350px;
+    min-height: 220px;
+    right: 100px;
+    top: 50px;
+    z-index: 3;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px grey;
+    border-radius: 20px;
+}

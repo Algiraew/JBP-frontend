@@ -1,32 +1,31 @@
 import Header from "./components/header/Header";
-// import Footer from "./components/footer/Footer";
-import styles from "./App.module.scss"
-import PhoneCards from "./components/Phone/phoneCards/PhoneCards";
-import Category from "./components/categories/Category";
 import Footer from "./components/footer/Footer";
-import { Routes, Route, } from 'react-router-dom';
-import About from "./components/about/About";
-import BlankPage from './components/blankPage/BlankPage';
-// import Category from "./components/categories/Category";
-// import Cart from "./components/Cart/Cart";
-// import ComparePhone from "./components/Phone/Compare/ComparePhone";
+import styles from "./App.module.scss";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { RegistrationForm } from "./components/auth/RegistrationForm";
+import { LoginForm } from "./components/auth/LoginForm";
+import { MainPage } from "./components/MainPage";
+import About from "./components/pages/About";
+import { useSelector } from "react-redux";
+import Products from "./components/pages/Products";
+import Solutions from "./components/pages/Solutions";
+import Support from "./components/pages/Support";
 import CarouselBox from "./components/Carousel/Carousel.box";
-import YandexMap from "./components/about/YandexMap";
-
 
 function App() {
+  const { token } = useSelector((state) => state.auth);
   return (
     <div className={styles.App}>
       <Header />
-      <CarouselBox />
-      <Category />
-      <PhoneCards/>
-      {/* <Routes>
-        <Route path='/about' element={<About />} />
-        {/* <Route path="/comparison" element={< PhoneCards />} /> */}
-        {/* <Route path='/products' element={<Category />} /> */}
-        {/* <Route path='/noPage' element={<BlankPage />} /> */}
-      {/* </Routes> */}
+      <Routes>
+        <Route exact path="/" element={<MainPage />} />
+        <Route path="/registration" element={<RegistrationForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/support" element={<Support />} />
+      </Routes>
       <Footer />
     </div>
   );
