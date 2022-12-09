@@ -31,30 +31,15 @@ const Header = () => {
       <h3 className={styles.logo}>GROZNY</h3>
       <ul className={styles.ul_div}>
         <NavLink to="/products" className={styles.main}>ALL PRODUCTS </NavLink>
-        <NavLink to="/noPage" className={styles.main}>SOLUTIONS </NavLink>
+        <NavLink to="/news" className={styles.main}>NEWS</NavLink>
+        <NavLink to="/phoneCards" className={styles.main}>COMPARISON </NavLink>
         <NavLink to="/about" className={styles.main}>ABOUT </NavLink>
-        <NavLink to="/comparison" className={styles.main}>SUPPORT </NavLink>
       </ul>
       <input type="text" placeholder=' Search...' className={styles.search} />
       <div className={styles.header_end}>
         {!activeAuth && !token && <div className={styles.auth}><AuthForm/></div>}
-          {/* // (
-          //   <Logout />
-          // ) : (
-          //   <>
-          //     <Link className={styles.registr_item} to="/registration">
-          //       Регистрация
-          //     </Link>
-          //     <Link className={styles.registr_item} to="/login">
-          //       Войти
-          //     </Link>
-          //   </>
-          // ) */}
-          
-        {/* </div>} */}
-        
         {token ? <Logout/> : <img className={styles.group} src={img1} alt="" onClick={handleAuth} />}
-        <img className={styles.basket} src={img2} alt="" onClick={handleCart} />
+        {token && <img className={styles.basket} src={img2} alt="" onClick={handleCart} />}
         {!active && products.length > 0 && <span className={styles.count}>{products.length}</span>}
         {active && <Cart />}
       </div>

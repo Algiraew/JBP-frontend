@@ -6,8 +6,8 @@ import styles from './loginForm.module.css'
 const Logout = () => {
     const dispatch = useDispatch()
     return (
-        <div className={styles.logout}>
-            <button onClick={() => dispatch(logout())}>Выйти</button>
+        <div>
+            <button  className={styles.logout} onClick={() => dispatch(logout())}>Выйти</button>
         </div>
     );
 };

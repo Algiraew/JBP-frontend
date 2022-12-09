@@ -5,13 +5,17 @@ import watch from './photo-category/watch.png'
 import wphones from './photo-category/wphones.png'
 import tablet from './photo-category/tablet.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AbbreviatedNews from '../NewsPage/AbbreviatedNews'
+
+import CarouselBox from '../Carousel/Carousel.box'
+import PhoneCards from '../Phone/phoneCards/PhoneCards'
 
 export default function Category () {
   return (
     <div className={styles.category_main}>
+        <CarouselBox/>
         <h2 className={styles.main_text}>Наши последние предложения и категории</h2>
-        <p className={styles.paragraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. 
-            Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className={styles.paragraph}><h5> Найдите что-нибуть понемногу для всех!</h5></p>
             <ul className={styles.div_ul}>
                 <div className={styles.upper_ul}>
                     <div className={styles.laptop_div}>
@@ -34,6 +38,9 @@ export default function Category () {
                     </div>
                 </div>
             </ul>
+            <AbbreviatedNews/>
+            <PhoneCards/>
         </div>
+
     )
 }

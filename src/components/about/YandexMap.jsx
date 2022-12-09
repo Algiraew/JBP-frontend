@@ -7,7 +7,7 @@ export default function YandexMap() {
     <div className={style.Map}> 
     
       <YMaps>
-        <Map defaultState={{ center: [43.324675, 45.692376], zoom: 12 }} width={"100%"} height={"300px"}>
+        <Map defaultState={{ center: [43.324675, 45.692376], zoom: 15 }} width={"100%"} height={"300px"}>
           <Placemark defaultGeometry={[43.324675, 45.692376]}/> 
         </Map>
       </YMaps>
